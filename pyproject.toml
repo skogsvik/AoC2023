@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "AoC 2023"
+version = "0.1.0"
+description = "Solutions for https://adventofcode.com/2023, attempted after the event."
+authors = ["Erik Silfverswärd"]
+readme = "README.md"
+packages = [{ include = "python", from = "src" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.14"
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "sys/python"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+output-format = "grouped"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "PTH",
+    "ANN",
+    "T20",
+    "COM812",
+    "S101",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+]
+pydocstyle.convention = "google"
+flake8-quotes.inline-quotes = "single"
+flake8-pytest-style.fixture-parentheses = false
+
+[tool.ruff.format]
+quote-style = "single"
+line-ending = "lf"
