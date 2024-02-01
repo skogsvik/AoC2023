@@ -32,6 +32,8 @@ output-format = "grouped"
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
+    "TD",
+    "FIX",
     "PTH",
     "ANN",
     "T20",
